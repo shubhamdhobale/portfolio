@@ -4,11 +4,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const Home = () => {
   return (
-    <section className="mt-60">
+    <section className="mt-60 relative">
     <div className="container mx-auto flex justify-center items-center gap-20">
       <div>
-        <div className="w-60 h-60 border rounded-full">
-          <img src={logo} alt="" className='rounded-full bg-gradient-to-bl	'/>
+        <div className="w-64 h-64 border rounded-full drop-shadow-2xl	">
+          <img src={logo} alt="" className='rounded-full drop-shadow-2xl hover:opacity-90 hover:scale-150 transition-all duration-700'/>
         </div>
       </div>
       <div className="flex gap-4 flex-col">
@@ -16,7 +16,7 @@ const Home = () => {
         <h1 className="font-bold text-4xl">Shubham Dhobale</h1>
         <h4 className="font-bold text-2xl opacity-50">Full Stack Developer</h4>
         <div className="flex gap-4">
-          <button className="border border-black rounded-3xl p-4 text-sm font-bold hover:bg-gray-700 hover:text-white">Download CV</button>
+          <button className="border border-black rounded-3xl p-4 text-sm font-bold hover:bg-gray-700 hover:text-white transition-all duration-700">Download CV</button>
           <button className="border border-black rounded-3xl p-4 text-sm font-bold text-white bg-gray-700 hover:bg-gray-600">Constact Info</button>
         </div>
         <div className="flex justify-center items-center gap-4 mr-10">
