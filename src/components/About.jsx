@@ -3,7 +3,7 @@ import logo from '../assets/IMG20240601183951 (1).jpg'
 
 const About = () => {
   return (
-    <section className="top-60 relative h-screen mt-40">
+    <section id="about" className="h-screen pt-40 flex flex-col items-center">
       <p className="text-md">Get to know more</p>
       <h1 className="text-5xl font-bold">About Me</h1>
       <div className="flex flex-row justify-center items-center gap-8 mt-12">

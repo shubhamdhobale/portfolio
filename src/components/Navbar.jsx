@@ -1,22 +1,31 @@
-import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
+
 const Navbar = () => {
   return (
-    <div >
-          <nav className=" text-black w-full p-6 fixed top-0 left-0 border border-black	 shadow-lg z-50 bg-white">
+    <nav className="text-black w-full p-6 fixed top-0 left-0 border border-black shadow-lg z-50 bg-white">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-lg font-bold ml-36 w-44">
-          <img src={logo} alt="logo "/>
-        </div>
-        <div className="mr-24 text-xl ">
-          <a href="/" className="px-4 hover:text-gray-400 hover:underline">Home</a>
-          <a href="#" className="px-4 hover:text-gray-400 hover:underline">About</a>
-          <a href="#" className="px-4 hover:text-gray-400 hover:underline">Projects</a>
-          <a href="#" className="px-4 hover:text-gray-400 hover:underline">Contact</a>
-        </div>
+        <img src={logo} alt="logo" className='ml-36 w-44' />
+        <ul className="flex space-x-4">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            {/* <Link to="/about">About</Link> */}
+            <a href="#about">About</a>
+          </li>
+          <li>
+            {/* <Link to="/projects">Projects</Link> */}
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            {/* <Link to="/contact">Contact</Link> */}
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
     </nav>
-    </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

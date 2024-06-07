@@ -2,7 +2,7 @@ import { FaCircleCheck } from "react-icons/fa6"
 
 const Skills = () => {
   return (
-   <section className="h-screen pt-40">
+   <section className="h-screen pt-40 flex flex-col items-center">
     <p className="opacity-90 p-2">Explore My</p>
     <h1 className="font-bold text-3xl">Technical Skills</h1>
     <div className="flex items-center justify-center gap-12 mt-12">
