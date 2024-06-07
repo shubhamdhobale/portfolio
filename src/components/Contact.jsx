@@ -6,7 +6,7 @@ const Contact = () => {
   const adminEmail = 'shubhamdhobale1945@gmail.com';
 
   return (
-    <motion.div id='contact' className="pt-20 px-4 md:px-8 lg:px-16 flex flex-col justify-center items-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 10 }}>
+    <motion.div id='contact' className="pt-20 px-4 md:px-8 lg:px-16 flex flex-col justify-center items-center w-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 10 }}>
       <p className="p-1 opacity-90">Get in Touch</p>
       <h1 className="text-3xl md:text-5xl font-bold">Contact Me</h1>
       <div className='flex flex-row mt-20 md:flex-row justify-center items-center gap-8'>
