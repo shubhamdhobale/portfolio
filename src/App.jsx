@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 function App() {
   return (
-    <motion.div className="flex flex-col items-center justify-center w-full min-h-screen bg-gray-100" >
+    <motion.div className="flex flex-col items-center justify-center w-screen min-h-screen" >
       <Navbar />
       <div className="w-full">
         <Home />
