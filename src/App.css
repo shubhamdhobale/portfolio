@@ -60,3 +60,6 @@
 
 
 
+html {
+  scroll-behavior: smooth;
+}

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 function App() {
   return (
-    <motion.div className="flex flex-col items-center justify-center w-full tracking-wider" >
+    <motion.div className="flex flex-col items-center justify-center w-full tracking-wider min-h-screen flex-grow" >
       <Navbar />
       {/* <Routes>
         <Route path="/" element={<Home />} />
