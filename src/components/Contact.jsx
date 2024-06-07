@@ -1,9 +1,13 @@
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa6'
 import img from '../assets/undraw_Agreement_re_d4dv.png'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
+
+  const adminEmail = 'shubhamdhobale1945@gmail.com'
+
   return (
-    <div id='contact' className="h-screen pt-40 flex flex-col items-center">
+    <motion.div id='contact' className="h-screen pt-40 flex flex-col items-center" initial={{opacity:0}} animate={{opacity: 1}} transition={{duration: 10}}>
       <p className="p-1 opacity-90">Get in Touch</p>
       <h1 className="text-5xl font-bold">Contact Me</h1>
       <div className='flex flex-row justify-center items-center  w-3/4'>
@@ -21,12 +25,12 @@ const Contact = () => {
         <a href="https://www.linkedin.com/in/shubham-dhobale-114083255/" target='_blank'><FaLinkedin size={25} className='hover:text-gray-500 transition-all duration-500' /></a>
         <a href="https://github.com/shubhamdhobale" target='_blank'><FaGithub size={25} className='hover:text-gray-500 transition-all duration-500'/></a>      
         <a href="https://www.instagram.com/_shubham.dhobale?igsh=NWhmbzJvbm92enU5" target='_blank'><FaInstagram size={25} className='hover:text-gray-500 transition-all duration-500'/></a>
-        <a href=""><FaEnvelope size={25} className='hover:text-gray-500 transition-all duration-500'/></a>      
+        <a href={`mailto:${adminEmail}`}><FaEnvelope size={25} className='hover:text-gray-500 transition-all duration-500'/></a>      
         </div>
       </form>  
       </div>  
       </div>    
-    </div>
+    </motion.div>
   )
 } 
 

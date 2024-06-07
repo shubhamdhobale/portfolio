@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.buttonDownload {
+  @apply inline-block relative;
+}
+
+.buttonDownload::before, .buttonDownload::after {
+  content: ' ';
+  @apply block absolute left-4 top-8;
+}
+
+.buttonDownload::before {
+  width: 10px;
+  height: 2px;
+  border-style: solid;
+  border-width: 0 2px 2px;
+}
+
+.buttonDownload::after {
+  width: 0;
+  height: 0;
+  margin-left: 1px; 
+   margin-top: -0.4375rem; 
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: transparent;
+  border-top-color: inherit;
+  animation: downloadArrow 1s linear infinite;
+  animation-play-state: paused;
+}
+
+.buttonDownload:hover::before {
+  border-color: #ffffff;
+}
+
+.buttonDownload:hover::after {
+  border-top-color: #ffffff;
+  animation-play-state: running;
+}
+
+@keyframes downloadArrow {
+  0% {
+    margin-top: -7px;
+    opacity: 1;
+  }
+  0.001% {
+    margin-top: -15px;
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 0.4;
+  }
+}
+
+
+
