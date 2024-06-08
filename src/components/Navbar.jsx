@@ -21,7 +21,7 @@ const Navbar = () => {
         </button>
         <ul className="hidden md:flex flex-row gap-4 md:space-x-4 text-lg md:text-xl opacity-75 mb-4 md:mb-0 mr-4 md:mr-20">
           <li className="hover:underline hover:text-gray-900 transition-all duration-1000">
-            <a href="/home">Home</a>
+            <a href="/">Home</a>
           </li>
           <li className="hover:underline hover:text-gray-900 transition-all duration-1000">
             <a href="#about">About</a>
