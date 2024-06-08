@@ -6,24 +6,27 @@ const Projects = () => {
       id: 1,
       title: "Sidcup Family Golf",
       description: "Experience the Sidcup Family Golf website clone, crafted with HTML, CSS, and JavaScript, featuring dynamic GSAP animations for an engaging user experience.",
-      img: "https://drive.google.com/uc?id=1fj4fB-LXsX1j5-tgHmF2WJgWobGeJUe2",
-      githubLink: "https://github.com/shubhamdhobale/Golf-website-clone.git"
+      img: "/images/golfwebsiteclone.png",
+      githubLink: "https://github.com/shubhamdhobale/Golf-website-clone.git",
+      demolink: "https://astonishing-seahorse-7651a5.netlify.app/"
     },
     {
       id: 2,
       title: "Portfolio",
       description: "Discover my MERN stack portfolio website, elevated with Framer Motion animations, showcasing projects, skills, and achievements in an immersive experience.",
-      img: "",
-      githubLink: "https://github.com/shubhamdhobale/portfolio.git"
+      img: "/images/portfolio.png",
+      githubLink: "https://github.com/shubhamdhobale/portfolio.git",
+      demolink: "https://shubhamdhobale.netlify.app/"
     },
     {
       id: 3,
       title: "megaBlogs",
       description: "Explore a dynamic MERN stack blogging platform powered by Appwrite, enabling seamless hosting, reading, and storage of your captivating blogs.",
       img: "",
-      githubLink: "https://github.com/shubhamdhobale/mega-blogs.git"
+      githubLink: "https://github.com/shubhamdhobale/mega-blogs.git",
+      demolink: ""
     },
-    { id: 4, title: "Project 4", description: "Description of project 4", img: "" },
+    { id: 4, title: "Project 4", description: "Description of project 4", img: "/images/airmax.png" },
     { id: 5, title: "Project 5", description: "Description of project 5", img: "" }
   ];
 
@@ -39,7 +42,7 @@ const Projects = () => {
             <p className="text-sm md:text-base px-2">{project.description}</p>
             <div className="flex items-center justify-center gap-4 mt-4">
               <a href={project.githubLink} target="_blank" className="border rounded-3xl px-4 py-2 border-black hover:text-white hover:bg-gray-600 transition-all duration-500">Github</a>
-              <button className="border rounded-3xl px-4 py-2 border-black hover:text-white hover:bg-gray-600 transition-all duration-500">Live Demo</button>
+              <a href={project.demolink} target="_blank" className="border rounded-3xl px-4 py-2 border-black hover:text-white hover:bg-gray-600 transition-all duration-500">Live Demo</a>
             </div>
           </div>
         ))}

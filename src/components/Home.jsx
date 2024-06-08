@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <motion.section 
       id='home' 
-      className=" md:pt-0 h-screen flex flex-col justify-center items-center w-full" 
+      className=" md:pb-12 h-screen flex flex-col justify-center items-center w-full" 
       initial={{opacity:0}} 
       animate={{opacity: 1}} 
       transition={{duration: 3}}
