@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 // MongoDB Connection
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb+srv://shubhamdhobale2021it:shubham123@cluster0.lihjfuu.mongodb.net/portfolio");
+    await mongoose.connect(`${process.env.MONGO_URL}`);
     console.log(`DB Connected ${mongoose.connection.host}`);
   } catch (error) {
     console.error("MongoDB connection error", error);
