@@ -24,7 +24,7 @@ const Skills = () => {
   ];
 
   return (
-    <motion.section className="min-h-screen pt-20 px-4 flex flex-col items-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 10 }}>
+    <motion.section id="skills" className="min-h-screen pt-20 px-4 flex flex-col items-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 10 }}>
       <p className="opacity-90 p-2">Explore My</p>
       <h1 className="font-bold text-3xl text-center">Technical Skills</h1>
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12 w-full max-w-4xl">
