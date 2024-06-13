@@ -20,19 +20,19 @@ const Navbar = () => {
           Menu
         </button>
         <ul className="hidden md:flex flex-row gap-4 md:space-x-4 text-lg md:text-xl opacity-75 mb-4 md:mb-0 mr-4 md:mr-20">
-          <li className="hover:underline hover:text-gray-900 transition-all duration-1000">
+          <li className="hover:underline hover:text-gray-900 hover:scale-110 transition-all duration-1000">
             <a href="/">Home</a>
           </li>
-          <li className="hover:underline hover:text-gray-900 transition-all duration-1000">
+          <li className="hover:underline hover:text-gray-900 hover:scale-110 transition-all duration-1000">
             <a href="#about">About</a>
           </li>
-          <li className="hover:underline hover:text-gray-900 transition-all duration-1000">
+          <li className="hover:underline hover:text-gray-900 hover:scale-110 transition-all duration-1000">
             <a href="#skills">Skills</a>
           </li>
-          <li className="hover:underline hover:text-gray-900 transition-all duration-1000">
+          <li className="hover:underline hover:text-gray-900 hover:scale-110 transition-all duration-1000">
             <a href="#projects">Projects</a>
           </li>
-          <li className="hover:underline hover:text-gray-900 transition-all duration-1000">
+          <li className="hover:underline hover:text-gray-900 hover:scale-110 transition-all duration-1000">
             <a href="#contact">Contact</a>
           </li>
         </ul>

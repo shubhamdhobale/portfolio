@@ -3,6 +3,7 @@ import img from '../assets/undraw_Agreement_re_d4dv.png';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import axios from 'axios';
+import {toast , ToastContainer} from 'react-toastify'
 
 const Contact = () => {
   const adminEmail = 'shubhamdhobale1945@gmail.com';
@@ -17,19 +18,28 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const toastOptions = {
+    position: "bottom-right",
+    autoClose: 8000,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "dark"
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post('/api/formdata', formData);
-      alert(response.data.message);
-      setFormData({ name: '', message: '' });
+      toast.success(response.data.message , toastOptions);  // Show the success message
+      window.location.reload();  
     } catch (error) {
       console.log("Internal error", error);
+      alert('Failed to submit the form. Please try again.');  // Show error message
     }
   };
 
   return (
-    <motion.div id='contact' className="pt-28 px-4 md:px-8 lg:px-16 flex flex-col justify-center items-center w-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 10 }}>
+    <motion.div id='contact' className="pt-28 px-4 md:px-8 lg:px-16 flex flex-col justify-center items-center w-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 5 }}>
       <p className="p-1 opacity-90">Get in Touch</p>
       <h1 className="text-3xl md:text-5xl font-bold">Contact Me</h1>
       <div className='flex flex-row pt-6 md:flex-row justify-center items-center gap-8 w-full'>
@@ -57,7 +67,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
             />
-            <button type='submit' className='bg-gray-500 p-2 rounded-xl font-bold text-sm text-white'>Submit</button>
+            <button type='submit' className='bg-gray-700 hover:bg-gray-500 transition-all duration-700 p-2 rounded-xl font-bold text-sm text-white'>Submit</button>
           </form>
 
           <div className='flex justify-center gap-6 mt-4'>
@@ -68,8 +78,18 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </motion.div>
   );
 };
 
 export default Contact;
+
+
+
+
+
+
+
+
+

@@ -60,11 +60,12 @@ const About = () => {
     <motion.section id="about" className="min-h-screen pt-24 px-4 flex flex-col items-center ml-2 w-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 5 }}>
       <p className="text-md">Get to know more</p>
       <h1 className="text-3xl md:text-5xl font-bold text-center">About Me</h1>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-4 w-full">
-        <div className="w-1/2 h-1/2 md:w-96 md:h-72 drop-shadow-2xl">
-          <img src={logo} alt="" className="w-full h-full object-cover rounded drop-shadow-2xl hover:opacity-80 hover:scale-105 transition-all duration-300" />
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-4 w-full md:w-4/5">
+        <div className="w-96 md:w-1/2 md:h-96 drop-shadow-2xl">
+          <img src={logo} alt="" className="w-full h-full object-cover rounded drop-shadow-2xl hover:opacity-80 hover:scale-125 transition-all duration-700" />
         </div>
-        <div className="flex flex-col gap-4 md:w-96 pt-8 md:pt-16 justify-center items-center w-1/2 h-1/2">
+        <div className="flex flex-col gap-4 md:w-1/2 pt-8 md:pt-16 justify-center items-center w-96
+        ">
           <p className="opacity-85 leading-7 tracking-wider text-center md:w-full  ">Greetings! I&apos;m <span className="text-red-500">Shubham Santosh Dhobale</span>, a tech enthusiast originally from Manchar, Pune. Armed with a solid educational background in <span className="text-red-500">BE in Information Technology</span>, I&apos;ve embarked on a dynamic journey through the tech landscape. Over the years, I&apos;ve immersed myself in various roles and projects, acquiring invaluable experience and refining my skills. My expertise spans <span className="text-red-500">full stack development</span>, backed by certifications in <span className="text-red-500">MERN Stack</span>. Utilizing my knowledge and expertise to contribute meaningfully to the ever-evolving tech industry.</p>
           <div className="flex flex-row md:flex-row gap-4 items-center justify-center mt-8 w-full md:w-96" >
             <div className="border border-black rounded-3xl flex flex-col justify-center items-center gap-2 p-4 hover:text-blue-700 hover:underline transition-all duration-300 h-1/2 w-1/2 md:w-full" onClick={togglePopup1}>

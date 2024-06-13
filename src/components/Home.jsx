@@ -1,4 +1,5 @@
 import logo from '../assets/IMG20240601183500.jpg';
+import leetcode_icon from '../assets/leetocode-icon.png'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import '../App.css';
@@ -28,7 +29,7 @@ const Home = () => {
           <h4 className="font-bold text-xl md:text-2xl opacity-50 text-center md:text-left">Full Stack Developer</h4>
           <div className="flex gap-4 flex-row md:flex-row">
             <button className="buttonDownload w-44 border border-black rounded-3xl p-4 text-sm font-bold hover:bg-gray-700 hover:text-white transition-all duration-700">
-              <a href="../assets/Shubham dhobale (1).pdf" download='Shubham dhobale.pdf'>Download CV</a>
+              <a href="../../public/Shubham dhobale (2).pdf" download='/public/Shubham dhobale (2).pdf'>Download CV</a>
             </button>
             <a href="#contact">
               <button className="border border-black rounded-3xl p-4 text-sm font-bold text-white bg-gray-700 hover:bg-gray-600 w-40">
@@ -42,6 +43,9 @@ const Home = () => {
             </a>
             <a href="https://github.com/shubhamdhobale" target='_blank' rel="noopener noreferrer">
               <FaGithub size={30} className='cursor-pointer hover:text-gray-500' />
+            </a>
+            <a href="https://leetcode.com/u/shubhamdhobale/" target='_blank' rel="noopener noreferrer">
+              <img src={leetcode_icon} className='cursor-pointer hover:opacity-60 h-6' />
             </a>
           </div>
         </div>
