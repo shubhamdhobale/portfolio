@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+// import {useState} from 'react';
+
 
 const Projects = () => {
+
+  // const [selectedId, setSelectedId] = useState(null)
+
   const projects = [
     {
       id: 1,
@@ -30,13 +36,24 @@ const Projects = () => {
     { id: 5, title: "Project 5", description: "Description of project 5", img: "" }
   ];
 
+  
+  // const { ref: imageRef, inView: imageInView } = useInView({ triggerOnce: true }   );
+  const { ref: textRef, inView: textInView } = useInView({ triggerOnce: true });  
+
   return (
-    <motion.div id="projects" className="pt-10 px-4 ml-1/4 md:px-8 lg:px-16 flex flex-col justify-center items-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 10 }}>
+    <motion.div id="projects" className="pt-10 px-4 ml-1/4 md:px-8 lg:px-16 flex flex-col justify-center items-center"  ref={textRef}
+    initial={{ opacity: 0 , x:-100}}
+    animate={textInView ? { opacity: 1, x:0 } :{}}
+    transition={{ duration: 2 }}>
       <p className="p-1 opacity-90">Browse My Recent</p>
       <h1 className="text-3xl md:text-5xl font-bold">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10 ">
-        {projects.map((project) => (
-          <div key={project.id} className="w-full border border-black rounded-3xl flex flex-col gap-4 p-8 items-center justify-center">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10 " ref={textRef}
+    initial={{ opacity: 0 , x:200}}
+    animate={textInView ? { opacity: 1, x:0 } :{}}
+    transition={{ duration: 2 }}>
+        {
+        projects.map((project) => (
+          <div key={project.id}  className="w-full border border-black rounded-3xl flex flex-col gap-4 p-8 items-center justify-center">
             <h1 className="font-bold text-2xl md:text-4xl p-2">{project.title}</h1>
             <img src={project.img} alt="img" className="rounded-3xl bg-cover w-full h-48 md:h-60 hover:opacity-80 hover:scale-105 transition-all duration-500" />
             <p className="text-sm md:text-base px-2">{project.description}</p>
@@ -45,8 +62,9 @@ const Projects = () => {
               <a href={project.demolink} target="_blank" className="border rounded-3xl px-4 py-2 border-black hover:text-white hover:bg-gray-600 transition-all duration-500">Live Demo</a>
             </div>
           </div>
-        ))}
-      </div>
+        ))
+        }
+      </motion.div>
     </motion.div>
   );
 };

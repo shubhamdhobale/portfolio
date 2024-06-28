@@ -1,29 +1,45 @@
 import logo from '../assets/IMG20240601183500.jpg';
-import leetcode_icon from '../assets/leetocode-icon.png'
+import leetcode_icon from '../assets/leetocode-icon.png';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import '../App.css';
 
 const Home = () => {
+  const { ref: imageRef, inView: imageInView } = useInView({ triggerOnce: true });
+  const { ref: textRef, inView: textInView } = useInView({ triggerOnce: true });
+
   return (
     <motion.section 
       id='home' 
-      className=" md:pb-12 h-screen flex flex-col justify-center items-center w-full" 
-      initial={{opacity:0}} 
-      animate={{opacity: 1}} 
-      transition={{duration: 3}}
+      className="md:pb-12 h-screen flex flex-col justify-center items-center w-full" 
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }} 
+      transition={{ duration: 2 }}
     >
       <div className="container ml-4 mt-48 flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 p-4 md:mr-10">
-        <div className="flex justify-center md:justify-start ">
-          <div className="w-96 h-96 md:w-96 md:h-96  border rounded-full drop-shadow-2xl">
+        <motion.div 
+          className="flex justify-center md:justify-start"
+          ref={imageRef}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={imageInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 1 }}
+        >
+          <div className="w-96 h-96 md:w-96 md:h-96 border rounded-full drop-shadow-2xl">
             <img 
               src={logo} 
               alt="" 
               className='rounded-full drop-shadow-2xl hover:opacity-90 hover:scale-125 transition-all duration-1000 w-full h-full object-cover' 
             />
           </div>
-        </div>
-        <div className="flex flex-col items-center md:items-start gap-4">
+        </motion.div>
+        <motion.div 
+          className="flex flex-col items-center md:items-start gap-4"
+          ref={textRef}
+          initial={{ opacity: 0, x: 100 }}
+          animate={textInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 2 }}
+        >
           <p className="font-bold opacity-50 text-center md:text-left">Hello I&apos;m</p>
           <h1 className="font-bold text-3xl md:text-4xl text-center md:text-left">Shubham Dhobale</h1>
           <h4 className="font-bold text-xl md:text-2xl opacity-50 text-center md:text-left">Full Stack Developer</h4>
@@ -48,10 +64,10 @@ const Home = () => {
               <img src={leetcode_icon} className='cursor-pointer hover:opacity-60 h-6' />
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
-}
+};
 
 export default Home;

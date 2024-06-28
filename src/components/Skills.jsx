@@ -1,5 +1,7 @@
 // import { FaCircleCheck } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+
 
 const Skills = () => {
   const frontendSkills = [
@@ -22,13 +24,27 @@ const Skills = () => {
     { id: 5, skill: "Firebase" },
     { id: 6, skill: "appwrite" },
   ];
+  
+
+  const { ref: imageRef, inView: imageInView } = useInView({ triggerOnce: true });
+  const { ref: textRef, inView: textInView } = useInView({ triggerOnce: true });
 
   return (
-    <motion.section id="skills" className="min-h-screen pt-20 px-4 flex flex-col items-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 10 }}>
+    <motion.section id="skills" className="min-h-screen pt-20 px-4 flex flex-col items-center" 
+    ref={imageRef}
+    initial={{ opacity: 0 , x:-100}}
+    animate={imageInView ? { opacity: 1, x:0 } :{}}
+    transition={{ duration: 2 }}>
       <p className="opacity-90 p-2">Explore My</p>
       <h1 className="font-bold text-3xl text-center">Technical Skills</h1>
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12 w-full max-w-4xl">
-        <div className="border border-gray-500 rounded-3xl px-8 py-8 md:p-16 w-full">
+        <motion.div 
+        className="border border-gray-500 rounded-3xl px-8 py-8 md:p-16 w-full"
+        ref={textRef}
+        initial={{ opacity: 0 , x:-100}}
+        animate={textInView ? { opacity: 1, x:0 } :{}}
+        transition={{ duration: 2 }}
+        >
           <h1 className="font-bold opacity-70 text-xl mb-4 md:pl-4 pl-20">Frontend Development</h1>
           <hr className="border bg-gray-950 w-full my-2" />
           <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-auto-fit gap-4 md:gap-8">
@@ -39,8 +55,14 @@ const Skills = () => {
               </div>
             ))}
           </div>
-        </div>
-        <div className="border border-gray-500 rounded-3xl px-8 py-8 md:p-16 w-full mt-8 md:mt-0">
+        </motion.div>
+        <motion.div 
+        className="border border-gray-500 rounded-3xl px-8 py-8 md:p-16 w-full mt-8 md:mt-0"
+        ref={textRef}
+        initial={{ opacity: 0 , x:200}}
+        animate={textInView ? { opacity: 1, x:0 } :{}}
+        transition={{ duration: 2 }}
+        >
           <h1 className="font-bold opacity-70 text-xl mb-4 md:pl-4 pl-20">Backend Development</h1>
           <hr className="border bg-gray-950 w-full my-2" />
           <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-auto-fit gap-4 md:gap-8">
@@ -51,7 +73,7 @@ const Skills = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
