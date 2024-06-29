@@ -16,6 +16,8 @@ const About = () => {
     setIsOpen2(!isOpen2);
   };
 
+  
+
   const EducationalInfo = [
     {
       id: 1,
@@ -69,12 +71,12 @@ const About = () => {
       animate={imageInView ? { opacity: 1, x:0 } :{}}
       transition={{ duration: 2 }}
     >
-      <p className="text-md">Get to know more</p>
-      <h1 className="text-3xl md:text-5xl font-bold text-center">About Me</h1>
+      <p className="text-md tracking-wider">Get to know more</p>
+      <h1 className="text-3xl md:text-5xl font-bold text-center tracking-wider">About Me</h1>
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-4 w-full md:w-4/5">
         <motion.div
           ref={imageRef}
-          initial={{ opacity: 0, x: -100 }}
+          initial={{ opacity: 0, x: -200 }}
           animate={imageInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 2 }}
           className="w-96 md:w-1/2 md:h-96 drop-shadow-2xl"
@@ -92,16 +94,16 @@ const About = () => {
           transition={{ duration: 1 }}
           className="flex flex-col gap-4 md:w-1/2 pt-8 md:pt-16 justify-center items-center w-96"
         >
-          <p className="opacity-85 leading-7 tracking-wider text-center md:w-full">
+          <p className="opacity-85 leading-7 tracking-wider text-center md:w-full ">
             Greetings! I&apos;m <span className="text-red-500">Shubham Santosh Dhobale</span>, a tech enthusiast originally from Manchar, Pune. Armed with a solid educational background in <span className="text-red-500">BE in Information Technology</span>, I&apos;ve embarked on a dynamic journey through the tech landscape. Over the years, I&apos;ve immersed myself in various roles and projects, acquiring invaluable experience and refining my skills. My expertise spans <span className="text-red-500">full stack development</span>, backed by certifications in <span className="text-red-500">MERN Stack</span>. Utilizing my knowledge and expertise to contribute meaningfully to the ever-evolving tech industry.
           </p>
           <div className="flex flex-row md:flex-row gap-4 items-center justify-center mt-8 w-full md:w-96">
             <div
-              className="border border-black rounded-3xl flex flex-col justify-center items-center gap-2 p-4 hover:text-blue-700 hover:underline transition-all duration-300 h-1/2 w-1/2 md:w-full"
+              className="shadow-2xl rounded-3xl flex flex-col justify-center items-center gap-2 p-4 hover:text-blue-700 hover:underline transition-all duration-700 h-1/2 w-1/2 md:w-full"
               onClick={togglePopup1}
             >
               <FaMedal />
-              <h1 className="font-bold text-center text-sm md:text-base">Experience & Certifications</h1>
+              <h1 className="font-bold text-center text-sm md:text-base tracking-normal">Experience & Certifications</h1>
               {isOpen1 && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center">
                   <div className="absolute inset-0 bg-gray-900 opacity-50"></div>
@@ -152,11 +154,11 @@ const About = () => {
               )}
             </div>
             <div
-              className="border border-black rounded-3xl flex flex-col justify-center items-center gap-2 p-4 hover:text-blue-700 hover:underline transition-all duration-300 h-1/2 w-1/2"
+              className="shadow-2xl rounded-3xl flex flex-col justify-center items-center gap-2 p-4 hover:text-blue-700 hover:underline transition-all duration-700 h-1/2 w-1/2"
               onClick={togglePopup2}
             >
               <FaPeopleGroup />
-              <h1 className="font-bold text-center text-sm md:text-base">Education</h1>
+              <h1 className="font-bold text-center text-sm md:text-base tracking-wider">Education</h1>
               {isOpen2 && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center fadeIn">
                   <div className="absolute inset-0 bg-gray-900 opacity-50"></div>

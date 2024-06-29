@@ -4,10 +4,14 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../App.css';
+import codingNinja from '../../public/images/codingninja.svg';
+import { FlipWords } from './Flipwords';
 
 const Home = () => {
   const { ref: imageRef, inView: imageInView } = useInView({ triggerOnce: true });
   const { ref: textRef, inView: textInView } = useInView({ triggerOnce: true });
+  const words = ["Full_Stack_Developer", "Product_Designer"];
+
 
   return (
     <motion.section 
@@ -17,15 +21,18 @@ const Home = () => {
       animate={{ opacity: 1 }} 
       transition={{ duration: 2 }}
     >
-      <div className="container ml-4 mt-48 flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 p-4 md:mr-10">
+      <div className="container ml-4 mt-48 flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 p-4 md:mr-10 z-10">
         <motion.div 
           className="flex justify-center md:justify-start"
           ref={imageRef}
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.5 }}
           animate={imageInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 1 }}
+          transition={{ 
+            duration: 1,
+            delay: 0.5,
+           }}
         >
-          <div className="w-96 h-96 md:w-96 md:h-96 border rounded-full drop-shadow-2xl">
+          <div className="w-96 h-96 md:w-96 md:h-96 rounded-full drop-shadow-2xl ">
             <img 
               src={logo} 
               alt="" 
@@ -40,28 +47,35 @@ const Home = () => {
           animate={textInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 2 }}
         >
-          <p className="font-bold opacity-50 text-center md:text-left">Hello I&apos;m</p>
-          <h1 className="font-bold text-3xl md:text-4xl text-center md:text-left">Shubham Dhobale</h1>
-          <h4 className="font-bold text-xl md:text-2xl opacity-50 text-center md:text-left">Full Stack Developer</h4>
+          <p className="font-bold opacity-50 text-center md:text-left tracking-wider">Hello I&apos;m</p>
+          <h1 className="font-bold text-3xl md:text-4xl text-center md:text-left tracking-wider">Shubham Dhobale</h1>
+          <h4 className="font-bold text-xl md:text-2xl opacity-50 text-center md:text-left ">
+              <FlipWords words={words}/>
+          </h4>
           <div className="flex gap-4 flex-row md:flex-row">
-            <button className="buttonDownload w-44 border border-black rounded-3xl p-4 text-sm font-bold hover:bg-gray-700 hover:text-white transition-all duration-700">
+            <button className="buttonDownload w-44 shadow-2xl border border-neutral-200 rounded-3xl p-4 text-sm font-bold hover:bg-gray-700 hover:text-white transition-all duration-700 tracking-wider">
               <a href="../../public/Shubham dhobale (2).pdf" download='/public/Shubham dhobale (2).pdf'>Download CV</a>
             </button>
             <a href="#contact">
-              <button className="border border-black rounded-3xl p-4 text-sm font-bold text-white bg-gray-700 hover:bg-gray-600 w-40">
+              <button className="border shadow-xl  border-black rounded-3xl p-4 text-sm font-bold text-white bg-gray-700 hover:bg-gray-600 w-40 tracking-wider">
                 Contact Info
               </button>
             </a>
           </div>
-          <div className="flex justify-center md:justify-start items-center gap-4 mt-4">
+          <div className="flex justify-center md:justify-start items-center gap-4 mt-4 ml-20">
             <a href="https://www.linkedin.com/in/shubham-dhobale-114083255/" target='_blank' rel="noopener noreferrer">
-              <FaLinkedin size={30} className='cursor-pointer hover:text-gray-500' />
+              <FaLinkedin size={30} className='cursor-pointer hover:text-gray-500 relative bottom-2' />
             </a>
             <a href="https://github.com/shubhamdhobale" target='_blank' rel="noopener noreferrer">
-              <FaGithub size={30} className='cursor-pointer hover:text-gray-500' />
+              <FaGithub size={30} className='cursor-pointer hover:text-gray-500 relative bottom-2' />
             </a>
             <a href="https://leetcode.com/u/shubhamdhobale/" target='_blank' rel="noopener noreferrer">
-              <img src={leetcode_icon} className='cursor-pointer hover:opacity-60 h-6' />
+              <img src={leetcode_icon} className='cursor-pointer hover:opacity-60 h-6 relative bottom-2' />
+            </a>
+            <a href="https://www.naukri.com/code360/profile/shubham2312" target='_blank'>
+              <img src={codingNinja} alt="" className='cursor-pointer hover:opacity-60 h-8 absolute 
+               opacity-90'/>
+              <div className='h-12 w-28 relative left-8 bg-white'></div>
             </a>
           </div>
         </motion.div>

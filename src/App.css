@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--white);
+  --accent: var(--blue);
+
+  margin: 0;
+  padding: 0;
+  /* background-color: var(--background); */
+  /* color: var(--accent); */
+}
+
+
 .buttonDownload {
   @apply inline-block relative;
 }
@@ -33,6 +58,7 @@
 
 .buttonDownload:hover::before {
   border-color: #ffffff;
+  animation-play-state: running;
 }
 
 .buttonDownload:hover::after {
@@ -62,4 +88,20 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--black);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--background);
 }

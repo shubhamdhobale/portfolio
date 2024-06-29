@@ -5,6 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import {toast , ToastContainer} from 'react-toastify'
 
+
 const Contact = () => {
   const adminEmail = 'shubhamdhobale1945@gmail.com';
   const [formData, setFormData] = useState({
@@ -29,8 +30,8 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/formdata', formData);
-      toast.success(response.data.message , toastOptions);  // Show the success message
+      await axios.post('/api/formdata', formData);
+      toast.success('response.data.message' , toastOptions);  // Show the success message
       window.location.reload();  
     } catch (error) {
       console.log("Internal error", error);
@@ -40,8 +41,8 @@ const Contact = () => {
 
   return (
     <motion.div id='contact' className="pt-28 px-4 md:px-8 lg:px-16 flex flex-col justify-center items-center w-full" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 5 }}>
-      <p className="p-1 opacity-90">Get in Touch</p>
-      <h1 className="text-3xl md:text-5xl font-bold">Contact Me</h1>
+      <p className="p-1 opacity-90 tracking-wider">Get in Touch</p>
+      <h1 className="text-3xl md:text-5xl font-bold tracking-wider">Contact Me</h1>
       <div className='flex flex-row pt-6 md:flex-row justify-center items-center gap-8 w-full'>
         <div className='w-2/4 md:w-1/2'>
           <img src={img} alt="" className='mb-8 w-full' />
@@ -53,7 +54,7 @@ const Contact = () => {
               type="text"
               id='name'
               name='name'
-              className='border border-black p-4 rounded-xl'
+              className='border-black border p-4 rounded-xl'
               placeholder='Name'
               value={formData.name}
               onChange={handleChange}
