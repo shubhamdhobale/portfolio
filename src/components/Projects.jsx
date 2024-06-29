@@ -35,14 +35,14 @@ const Projects = () => {
     { id: 4, 
       title: "Grocery-shop", 
       description: "Welcome to our online grocery shop! Built with just HTML, CSS, and JavaScript. Browse through a wide selection of fresh produce, pantry staples, and household essentials. Enjoy easy navigation, responsive design, and secure checkout. Your convenience is our priority!", 
-      img: "../../public/images/groceryshop.png",
+      img: "/images/groceryshop.png",
       githubLink: "https://github.com/shubhamdhobale/grocery-shop.git",
     },
     { 
       id: 5, 
       title: "Natura Farm", 
       description: "Introducing Natura Farm, your gateway to organic farming! Our website, built using React and enhanced with Framer Motion, offers an engaging and interactive experience. With Firebase as our backend, we ensure secure and efficient data management.Stay tuned for our launch!", 
-      img: "../../public/images/naturafarm.png",
+      img: "/images/naturafarm.png",
       githubLink: "https://github.com/shubhamdhobale/natura-farm.git",
     }
   ];
