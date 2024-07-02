@@ -1,4 +1,4 @@
-import { FaCss3, FaDatabase, FaFigma, FaHtml5, FaNode, FaReact } from "react-icons/fa6";
+// import { FaCss3, FaDatabase, FaFigma, FaHtml5, FaNode, FaReact } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 
@@ -56,14 +56,14 @@ const Skills = () => {
       <p className="opacity-90 p-2 tracking-wider">Explore My</p>
       <code className="font-bold text-3xl text-center tracking-widest">Technical Skills</code>
       
-      <FaNode className="fill-green-500 w-20 h-20 absolute md:right-80 right-0" style={{ rotate: "10deg" }} />
+      {/* <FaNode className="fill-green-500 w-20 h-20 absolute md:right-80 right-0" style={{ rotate: "10deg" }} />
       <FaFigma className="fill-gray-500 w-20 h-10 absolute md:top-60 top-44" style={{ rotate: '10deg' }} />
       <FaReact className="fill-blue-900 w-20 h-20 absolute top-40 left-0 md:left-64" style={{ rotate: '30deg' }} />
       <FaDatabase className="fill-blue-500 w-20 h-20 absolute md:right-64 md:top-96 bottom-48 right-0 " style={{ rotate: '30deg' }} />
       <FaHtml5 className="fill-red-500 w-16 h-16 absolute md:left-80 left-20 -bottom-20 md:bottom-40" style={{ rotate: "20deg" }} />
       <motion.span whileHover={{ scale: 1.5, rotate: 30 }} whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}>
         <FaCss3 className="fill-blue-500 w-16 h-16 absolute md:right-96 md:bottom-20 right-0 -bottom-16" style={{ rotate: "10deg" }} />
-      </motion.span>
+      </motion.span> */}
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12 w-full max-w-4xl">
         <motion.div
