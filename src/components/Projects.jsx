@@ -44,6 +44,14 @@ const Projects = () => {
       description: "Introducing Natura Farm, your gateway to organic farming! Our website, built using React and enhanced with Framer Motion, offers an engaging and interactive experience. With Firebase as our backend, we ensure secure and efficient data management.Stay tuned for our launch!", 
       img: "/images/naturafarm.png",
       githubLink: "https://github.com/shubhamdhobale/natura-farm.git",
+    },
+    { 
+      id: 5, 
+      title: "EStore", 
+      description: "eStore is an online shopping platform where you can explore and buy everyday products. The project uses React for building the user interface, Tailwind CSS for styling, and Firebase for backend services like authentication and database management.", 
+      img: "../../public/images/EStore.png",
+      githubLink: "https://github.com/shubhamdhobale/EStrore.git",
+      demolink: "https://e-strore.vercel.app/"
     }
   ];
 
