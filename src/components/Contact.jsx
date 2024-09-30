@@ -65,6 +65,7 @@ const Contact = () => {
     } finally {
       setLoading(false); // End loading state
     }
+    e.preventDefault();
   };
 
   const container = {
@@ -102,6 +103,7 @@ const Contact = () => {
         <div className='w-2/4 md:w-1/2'>
           <motion.form className='flex flex-col gap-6'
             ref={textRef}
+            method='post'
             initial={{ opacity: 0, x: -100 }}
             animate={textInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 2 }}
