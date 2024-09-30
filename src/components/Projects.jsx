@@ -10,33 +10,42 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Sidcup Family Golf",
-      description: "Experience the Sidcup Family Golf website clone, crafted with HTML, CSS, and JavaScript, featuring dynamic GSAP animations for an engaging user experience.",
-      img: "/images/golfwebsiteclone.png",
-      githubLink: "https://github.com/shubhamdhobale/Golf-website-clone.git",
-      demolink: "https://astonishing-seahorse-7651a5.netlify.app/"
-    },
-    {
-      id: 2,
       title: "Portfolio",
       description: "Discover my MERN stack portfolio website, elevated with Framer Motion animations, showcasing projects, skills, and achievements in an immersive experience.",
       img: "/images/portfolio.png",
       githubLink: "https://github.com/shubhamdhobale/portfolio.git",
       demolink: "https://shubhamdhobale.netlify.app/"
     },
-    {
-      id: 3,
-      title: "megaBlogs",
-      description: "Explore a dynamic MERN stack blogging platform powered by Appwrite, enabling seamless hosting, reading, and storage of your captivating blogs.",
-      img: "https://cdn.prod.website-files.com/5e593fb060cf877cf875dd1f/6650c8189cd55eb06920c00a_663ce8e4803bbe3360d137a1_3D.jpeg",
-      githubLink: "https://github.com/shubhamdhobale/mega-blogs.git",
-      demolink: "https://mega-blogs-omega.vercel.app/"
+    { 
+      id: 6, 
+      title: "EStore", 
+      description: "eStore is an online shopping platform where you can explore and buy everyday products. The project uses React for building the user interface, Tailwind CSS for styling, and Firebase for backend services like authentication and database management.", 
+      img: "../../public/images/EStore.png",
+      githubLink: "https://github.com/shubhamdhobale/EStrore.git",
+      demolink: "https://e-strore.vercel.app/"
     },
+    {
+      id: 2,
+      title: "Sidcup Family Golf",
+      description: "Experience the Sidcup Family Golf website clone, crafted with HTML, CSS, and JavaScript, featuring dynamic GSAP animations for an engaging user experience.",
+      img: "/images/golfwebsiteclone.png",
+      githubLink: "https://github.com/shubhamdhobale/Golf-website-clone.git",
+      demolink: "https://ubiquitous-mandazi-aa55cb.netlify.app/"
+    },
+    // {
+    //   id: 3,
+    //   title: "megaBlogs",
+    //   description: "Explore a dynamic MERN stack blogging platform powered by Appwrite, enabling seamless hosting, reading, and storage of your captivating blogs.",
+    //   img: "https://cdn.prod.website-files.com/5e593fb060cf877cf875dd1f/6650c8189cd55eb06920c00a_663ce8e4803bbe3360d137a1_3D.jpeg",
+    //   githubLink: "https://github.com/shubhamdhobale/mega-blogs.git",
+    //   demolink: "https://mega-blogs-omega.vercel.app/"
+    // },
     { id: 4, 
       title: "Grocery-shop", 
       description: "Welcome to our online grocery shop! Built with just HTML, CSS, and JavaScript. Browse through a wide selection of fresh produce, pantry staples, and household essentials. Enjoy easy navigation, responsive design, and secure checkout. Your convenience is our priority!", 
       img: "/images/groceryshop.png",
       githubLink: "https://github.com/shubhamdhobale/grocery-shop.git",
+      demolink : "https://grand-yeot-37bf6c.netlify.app/"
     },
     { 
       id: 5, 
@@ -44,15 +53,9 @@ const Projects = () => {
       description: "Introducing Natura Farm, your gateway to organic farming! Our website, built using React and enhanced with Framer Motion, offers an engaging and interactive experience. With Firebase as our backend, we ensure secure and efficient data management.Stay tuned for our launch!", 
       img: "/images/naturafarm.png",
       githubLink: "https://github.com/shubhamdhobale/natura-farm.git",
+      demolink: "https://natura-farm-omega.vercel.app/"
     },
-    { 
-      id: 5, 
-      title: "EStore", 
-      description: "eStore is an online shopping platform where you can explore and buy everyday products. The project uses React for building the user interface, Tailwind CSS for styling, and Firebase for backend services like authentication and database management.", 
-      img: "../../public/images/EStore.png",
-      githubLink: "https://github.com/shubhamdhobale/EStrore.git",
-      demolink: "https://e-strore.vercel.app/"
-    }
+   
   ];
 
   

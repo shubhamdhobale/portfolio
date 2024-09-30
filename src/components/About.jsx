@@ -46,7 +46,7 @@ const About = () => {
       CompanyName: "- Infotrixs Pvt. Ltd.",
       duration: "- 1.5 month",
       technology: "- MERN Stack",
-      logo: "https://media.licdn.com/dms/image/D4D0BAQEOgqOJ89to1w/company-logo_200_200/0/1687286850731?e=1726099200&v=beta&t=ReDMiX7WEVADWCwLGRQ36jl2_udH2zXaqnEU7bBHgqE",
+      logo: "https://th.bing.com/th/id/OIP.qigu0dHkDGu6d48zJ3_lMwHaHE?w=176&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
       certificate: "https://drive.google.com/file/d/1T5o33H5W2uxsvzRlktuYPiI7sg1bBFjF/view?usp=drive_link"
     }
   ];
