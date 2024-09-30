@@ -20,7 +20,7 @@ const Projects = () => {
       id: 6, 
       title: "EStore", 
       description: "eStore is an online shopping platform where you can explore and buy everyday products. The project uses React for building the user interface, Tailwind CSS for styling, and Firebase for backend services like authentication and database management.", 
-      img: "../../public/images/EStore.png",
+      img: "/images/EStore.png",
       githubLink: "https://github.com/shubhamdhobale/EStrore.git",
       demolink: "https://e-strore.vercel.app/"
     },
