@@ -19,7 +19,7 @@ const Contact = () => {
     e.preventDefault(); // Prevent default form submission behavior
     if (firebaseData.name === "" || firebaseData.message === "") {
       toast.error("All fields are required"  ,{
-        position: "bottom-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -38,7 +38,7 @@ const Contact = () => {
       const ref = collection(fireDB, 'feedback');
       await addDoc(ref, firebaseData);
       toast.success("Message sent successfully" , {
-        position: "bottom-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -52,7 +52,7 @@ const Contact = () => {
     } catch (error) {
       console.log(error);
       toast.error("There was an error submitting the form. Please try again." , {
-        position: "bottom-center",
+        position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
