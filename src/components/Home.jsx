@@ -1,5 +1,5 @@
 import logo from '../assets/IMG20240601183500.jpg';
-import leetcode_icon from '../assets/leetocode-icon.png';
+import leetcode_icon from '../assets/leetcode-icon.png';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -54,7 +54,7 @@ const Home = () => {
           </h4>
           <div className="flex gap-4 flex-row md:flex-row">
             <button className="buttonDownload w-44 shadow-2xl border border-neutral-200 rounded-3xl p-4 text-sm font-bold hover:bg-gray-700 hover:text-white transition-all duration-700 tracking-wider">
-              <a href="../../public/Shubham dhobale.pdf" download='Shubham dhobale.pdf'>Download CV</a>
+              <a href="../../public/Shubham dhobale.pdf" download='/Shubham dhobale.pdf'>Download CV</a>
             </button>
             <a href="#contact">
               <button className="border shadow-xl  border-black rounded-3xl p-4 text-sm font-bold text-white bg-gray-700 hover:bg-gray-600 w-40 tracking-wider">

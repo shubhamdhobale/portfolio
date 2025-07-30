@@ -25,6 +25,14 @@ const Projects = () => {
       demolink: "https://e-strore.vercel.app/"
     },
     {
+      id: 3,
+      title: "KisanMitra",
+      description: "KisaanMitra is a smart agriculture web platform that helps farmers make informed decisions using AI. It analyzes soil images to identify soil types and provides personalized crop recommendations. The platform also offers educational support, market price info, and multilingual access to empower farmers with better productivity and sustainability.",
+      img: "../../public/images/kisanmitra.png",
+      githubLink: "https://github.com/shubhamdhobale/Farm-Tech.git",
+      demolink: "https://farm-tech-gamma.vercel.app/"
+    },
+    {
       id: 2,
       title: "Sidcup Family Golf",
       description: "Experience the Sidcup Family Golf website clone, crafted with HTML, CSS, and JavaScript, featuring dynamic GSAP animations for an engaging user experience.",
@@ -32,20 +40,12 @@ const Projects = () => {
       githubLink: "https://github.com/shubhamdhobale/Golf-website-clone.git",
       demolink: "https://ubiquitous-mandazi-aa55cb.netlify.app/"
     },
-    // {
-    //   id: 3,
-    //   title: "megaBlogs",
-    //   description: "Explore a dynamic MERN stack blogging platform powered by Appwrite, enabling seamless hosting, reading, and storage of your captivating blogs.",
-    //   img: "https://cdn.prod.website-files.com/5e593fb060cf877cf875dd1f/6650c8189cd55eb06920c00a_663ce8e4803bbe3360d137a1_3D.jpeg",
-    //   githubLink: "https://github.com/shubhamdhobale/mega-blogs.git",
-    //   demolink: "https://mega-blogs-omega.vercel.app/"
-    // },
     { id: 4, 
       title: "Grocery-shop", 
       description: "Welcome to our online grocery shop! Built with just HTML, CSS, and JavaScript. Browse through a wide selection of fresh produce, pantry staples, and household essentials. Enjoy easy navigation, responsive design, and secure checkout. Your convenience is our priority!", 
       img: "/images/groceryshop.png",
       githubLink: "https://github.com/shubhamdhobale/grocery-shop.git",
-      demolink : "https://grand-yeot-37bf6c.netlify.app/"
+      demolink : "https://info-teach-shop.onrender.com/"
     },
     { 
       id: 5, 
@@ -53,7 +53,7 @@ const Projects = () => {
       description: "Introducing Natura Farm, your gateway to organic farming! Our website, built using React and enhanced with Framer Motion, offers an engaging and interactive experience. With Firebase as our backend, we ensure secure and efficient data management.Stay tuned for our launch!", 
       img: "/images/naturafarm.png",
       githubLink: "https://github.com/shubhamdhobale/natura-farm.git",
-      demolink: "https://natura-farm-omega.vercel.app/"
+      demolink: "https://natura-farm.vercel.app/"
     },
    
   ];

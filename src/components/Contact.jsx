@@ -1,5 +1,5 @@
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import img from '../assets/undraw_Agreement_re_d4dv.png';
+// import img from '../assets/undraw_Agreement_re_d4dv.png';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -98,7 +98,7 @@ const Contact = () => {
           initial={{ opacity: 0, x: -200 }}
           animate={textInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 2 }}>
-          <img src={img} alt="" className='mb-8 w-full' />
+          {/* <img src={img} alt="" className='mb-8 w-full' /> */}
         </motion.div>
         <div className='w-2/4 md:w-1/2'>
           <motion.form className='flex flex-col gap-6'
