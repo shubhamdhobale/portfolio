@@ -54,7 +54,7 @@ const Home = () => {
           </h4>
           <div className="flex gap-4 flex-row md:flex-row">
             <button className="buttonDownload w-44 shadow-2xl border border-neutral-200 rounded-3xl p-4 text-sm font-bold hover:bg-gray-700 hover:text-white transition-all duration-700 tracking-wider">
-              <a href="../../public/Shubham dhobale.pdf" download='/Shubham dhobale.pdf'>Download CV</a>
+              <a href="/Shubham%20dhobale.pdf" download='/Shubham_dhobale.pdf'>Download CV</a>
             </button>
             <a href="#contact">
               <button className="border shadow-xl  border-black rounded-3xl p-4 text-sm font-bold text-white bg-gray-700 hover:bg-gray-600 w-40 tracking-wider">
